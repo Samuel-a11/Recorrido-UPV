@@ -98,6 +98,10 @@ public class CubeRenderer implements GLSurfaceView.Renderer{
         private int textura_cesped = 0;
         private int imagen_cielo = 0;
         private int textura_cielo = 0;
+        private int textura_cielo_enfrente = 0;
+        private int textura_cielo_atras = 0;
+        private int textura_cielo_derecha = 0;
+        private int textura_cielo_izquierda = 0;
         private int imagen_amarillo = 0;
         private int textura_amarillo = 0;
         private int imagen_azul = 0;
@@ -306,6 +310,10 @@ public class CubeRenderer implements GLSurfaceView.Renderer{
         textura_ventanaiti2 = generarTextura(R.drawable.ventanaiti2);
         textura_cesped = generarTextura(R.drawable.cesped);
         textura_cielo = generarTextura(R.drawable.cielo);
+        textura_cielo_enfrente = generarTextura(R.drawable.cielo_enfrente);
+        textura_cielo_atras = generarTextura(R.drawable.cielo_atras);
+        textura_cielo_derecha = generarTextura(R.drawable.cielo_derecha);
+        textura_cielo_izquierda = generarTextura(R.drawable.cielo_izquierda);
         textura_amarillo = generarTextura(R.drawable.amarillo);
         textura_azul = generarTextura(R.drawable.azul);
         textura_azulindigo = generarTextura(R.drawable.azulindigo);
@@ -3336,28 +3344,28 @@ public class CubeRenderer implements GLSurfaceView.Renderer{
     private void cielo_enfrente(){
         pushMatrix(g_modelMatrix);
         g_modelMatrix_translate(-500,-200,700);
-        pared_X(gll,u_MvpMatrix,3000,1000,imagen_cielo,textura_cielo);
+        pared_X(gll,u_MvpMatrix,3000,1000,imagen_cielo,textura_cielo_enfrente);
         g_modelMatrix = popMatrix();
     }
 
     private void cielo_atras(){
         pushMatrix(g_modelMatrix);
         g_modelMatrix_translate(-500,-200,-2300);
-        pared_X(gll,u_MvpMatrix,3000,1000,imagen_cielo,textura_cielo);
+        pared_X(gll,u_MvpMatrix,3000,1000,imagen_cielo,textura_cielo_atras);
         g_modelMatrix = popMatrix();
     }
 
     private void cielo_derecha(){
         pushMatrix(g_modelMatrix);
         g_modelMatrix_translate(-500,-200,700);
-        pared_Z(gll, u_MvpMatrix, 3000, 1000, imagen_cielo, textura_cielo);
+        pared_Z(gll, u_MvpMatrix, 3000, 1000, imagen_cielo, textura_cielo_derecha);
         g_modelMatrix = popMatrix();
     }
 
     private void cielo_izquierda(){
         pushMatrix(g_modelMatrix);
         g_modelMatrix_translate(2500,-200,700);
-        pared_Z(gll, u_MvpMatrix, 3000, 1000, imagen_cielo, textura_cielo);
+        pared_Z(gll, u_MvpMatrix, 3000, 1000, imagen_cielo, textura_cielo_izquierda);
         g_modelMatrix = popMatrix();
     }
 
