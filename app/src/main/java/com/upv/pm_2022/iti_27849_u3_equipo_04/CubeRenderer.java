@@ -312,8 +312,8 @@ public class CubeRenderer implements GLSurfaceView.Renderer{
         textura_cielo = generarTextura(R.drawable.cielo);
         textura_cielo_enfrente = generarTextura(R.drawable.cielo_enfrente);
         textura_cielo_atras = generarTextura(R.drawable.cielo_atras);
-        textura_cielo_derecha = generarTextura(R.drawable.cielo_derecha);
-        textura_cielo_izquierda = generarTextura(R.drawable.cielo_izquierda);
+        textura_cielo_derecha = generarTextura(R.drawable.cielo_izquierda);
+        textura_cielo_izquierda = generarTextura(R.drawable.cielo_derecha);
         textura_amarillo = generarTextura(R.drawable.amarillo);
         textura_azul = generarTextura(R.drawable.azul);
         textura_azulindigo = generarTextura(R.drawable.azulindigo);
